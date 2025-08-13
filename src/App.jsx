@@ -1,5 +1,6 @@
 import Counter from "./components/Counter"
 import Event from "./components/Event"
+import HarryPotterCharacters from "./components/HarryPotterCharacters"
 
 function App() {
 
@@ -9,7 +10,11 @@ function App() {
 
       {/* <Event /> */}
 
-      <Counter />
+      {/* <Counter /> */}
+
+      <HarryPotterCharacters />
+
+
 
     </>
   )

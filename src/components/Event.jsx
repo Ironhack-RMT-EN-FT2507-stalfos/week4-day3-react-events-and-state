@@ -31,7 +31,7 @@ function Event() {
       
       <h1 onMouseEnter={ handleMouseEnter } onMouseLeave={ handleMouseLeave }>Events!</h1>
 
-      <button onClick={handleClickButton}>Click</button>
+      <button onClick={() => console.log("clicking the button")}>Click</button>
 
       <br />
 

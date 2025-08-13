@@ -43,7 +43,7 @@ function Counter() {
 
       <h2>{counterValue}</h2>
 
-      <button disabled={counterValue >= 20 } onClick={ handleCounterIncrease }>Increase</button>
+      <button disabled={counterValue >= 20 ? true : false} onClick={ handleCounterIncrease }>Increase</button>
 
       <p>the recorder value was: {recordedValue === null ? "No recorded value": recordedValue}</p>
 
