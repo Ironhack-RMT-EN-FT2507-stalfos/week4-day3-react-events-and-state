@@ -26,15 +26,27 @@ function Counter() {
 
     // counterValue = counterValue + 1
     //! WE SHOULD NEVER DIRECTLY MUTATE OR CHANGE THE STATE
-    setCounterValue( counterValue + 1 )
+    // setCounterValue( counterValue + 1 )
+    // setCounterValue((currentState) => {
+    //   return currentState + 1
+    // })
+    setCounterValue((state) => state + 1)
     //1. it updates the state with the value added as an argument
     //2. after all set function are executed, it will re-render the component with the new values
 
   }
 
   const handleRecordValue = () => {
-    setRecordedValue( counterValue )
+    setRecordedValue( () => {
+      return counterValue
+    } )
+
+
+
   }
+
+
+
 
   return (
     <div>
@@ -54,3 +66,16 @@ function Counter() {
   )
 }
 export default Counter
+
+
+// example of how set functions are built inside React
+function setSomething(parameter) {
+
+  if (typeof parameter === "function") {
+    // ...
+    newStateValue = parameter()
+  } else {
+    newStateValue = parameter
+  }
+
+}
